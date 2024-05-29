@@ -50,7 +50,7 @@ namespace UnityEngine.Purchasing
             foreach (var queriedSkuDetails in queriedSkus)
             {
                 var queriedSku = queriedSkuDetails.Call<string>("getSku");
-#if UNITY_2021_1_OR_NEWER
+#if UNITY_2021_2_OR_NEWER
                 m_CachedQueriedSkus[queriedSku] = queriedSkuDetails.CloneReference();
 #else
                 m_CachedQueriedSkus[queriedSku] = queriedSkuDetails;
